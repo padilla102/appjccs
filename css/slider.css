@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.whatsapp {
+    display:block;
+    width:70px;
+    height:70px;
+    color: #fff;
+    position: fixed;
+    right:20px;
+    bottom: 200px;
+    border-radius:50%;
+    line-height:80px;
+    text-align:center;
+    z-index:999;
+}
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.container-all{
+    width: 100%;
+    height: 87%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 900;
+}
+
+header label{
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 0 20px;
+}
+
+header label:hover{
+    background: #393939;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 80px;
+    background-color: #000;
+    background-position: 50% 50%;
+    background-size: cover;
+    transition: left 0s 600ms;
+    z-index: 10;
+}
+
+
+.slide-1{
+    background-image: url(https://i.blogs.es/202202/cascadas/1366_2000.jpeg);
+}
+
+.slide-2{
+    background-image: url(https://concepto.de/wp-content/uploads/2016/04/amar-amor-e1504809990834.jpg);
+}
+
+.slide-3{
+    background-image: url(https://amarresyamores.com/wp-content/uploads/2018/10/pareja_amarres_amor_hechizos_brujeria_magia_blanca_bogota_medellin_cali_barranquilla.jpg);
+}
+
+.slide-4{
+    background-image: url(https://emtstatic.com/2015/03/masalla.png);
+}
+
+.slide-1{
+    color: black;
+}
+
+.slide-2{
+    color: black;
+}
+.slide-3{
+    color: white;
+}
+.slide-4{
+    color: black;
+}
+h1{
+    color: #fff;
+    font-size: 60px;
+    text-shadow: 1px 1px 1px #000;
+    
+    opacity: 0;
+    transform: translateY(300%);
+    transition: transform 500ms, opacity 500ms;
+}
+
+@media screen and (max-width:1366px){
+    .slide-slide-1{
+        padding: 50px;
+    }
+    .slide-3{
+        color: white;
+    }
+
+    .slide{
+        background-color: black;
+        font-size: 25px;
+        padding: 35px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .slide{
+        color: black;
+        background-color: black;
+    }
+    .slide{
+    font-size: 20px;
+    padding: 20px;
+    }
+    .slide-3{
+        color: white;
+    }
+}
+
+
+[id^="slide"]:checked + .slide{
+    left: 0;
+    z-index: 100;
+    transition: left 600ms ease;
+}
+
+[id^="slide"]:checked + .slide h1{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 500ms;
+}
+
+@media screen and (max-width:420px){
+    .slide{
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
